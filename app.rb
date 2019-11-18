@@ -4,9 +4,9 @@ ENV["RACK_ENV"] ||= "dev"
 require 'data_mapper'
 require 'sinatra'
 require 'dm-postgres-adapter'
-require_relative '../db/data_mapper_setup'
-require_relative '../lib/user'
-require_relative '../lib/listing'
+require_relative './db/data_mapper_setup'
+require_relative './lib/user'
+require_relative './lib/listing'
 #above are moduls
 require 'sinatra/base'
 
@@ -20,7 +20,13 @@ class MakersBnb < Sinatra::Base
 
   get '/listings/new' do
 
-    erb :new
+    "List your place"
+
+  end
+
+  get '/listings' do
+
+    "All the listings"
 
   end
 
