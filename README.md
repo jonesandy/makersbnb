@@ -1,12 +1,22 @@
 # MakersBnB
 
+*create database*
+- Please start by forking this repo.
+- In a terminal run `psql`
+- Create the following databases with:
+```
+CREATE DATABASE makers_bnb_dev;
+CREATE DATABASE makers_bnb_test;
+```
+<!-- - `rackup`
+- Using a web browser visit the relevant localhost -->
 The purpose of this app is to allow Hosts to list spaces to rent. Users are then able to browse posted listings and make bookings. The functionality is similar to AirBnB.
 
 ## User Stories
 
 The following User Stories were generated from the specification of the project.
 ```
-As an Host 
+As an Host
 So I can rent out my space
 I want to be able to list my space.
 
