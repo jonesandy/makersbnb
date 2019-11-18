@@ -5,6 +5,8 @@ require 'dm-postgres-adapter'
 require_relative '../lib/user'
 require_relative '../lib/listing'
 
+
+
 DataMapper.setup(:default, "postgres://localhost/makers_bnb_#{ENV['RACK_ENV']}")
 
 #This checks the models for validity and initializes all properties associated with relationships.
