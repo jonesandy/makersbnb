@@ -12,6 +12,12 @@ require 'sinatra/base'
 
 class MakersBnb < Sinatra::Base
 
+  get '/' do
+
+    erb :home
+
+  end
+
   get '/listings/new' do
 
     erb :new
