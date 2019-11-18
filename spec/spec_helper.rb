@@ -26,9 +26,9 @@ RSpec.configure do |config|
   #   DatabaseCleaner.clean_with(:truncation)
   # end
   #
-  # config.before(:each) do
-  #   DatabaseCleaner.start
-  # end
+  config.before(:each) do
+    DataMapper.auto_upgrade!
+  end
   #
   # config.after(:each) do
   #   DatabaseCleaner.clean
