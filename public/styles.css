@@ -2,6 +2,13 @@ html {
   background-color: lightblue;
 }
 
+body {
+  color: rgb(72,72,72);
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 header {
   width: 100%;
   overflow: auto;
@@ -42,17 +49,63 @@ h1 {
   margin-bottom: 0px;
 }
 
+.single_listing{
+  border: 1px solid rgb(72,72,72);
+  margin: 2px;
+  padding: 1px;
+  text-align: center;
+}
+
 .name {
-  font-size: 16px;
+  font-size: 1.6em;
   font-weight: bold;
+  ;
 }
 
 .description {
-  font-size: 12px;
+  font-size: 1em;
   font-style: italic;
-  color: blue;
+  color: rgb(47,79,79);
 }
 
 .price {
+  font-size: 1em;
+  font-weight:400;
+}
 
+.listingform {
+  margin: 0.8px;
+  padding: 2px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+
+}
+
+input[type=text] {
+  padding:5px; 
+  border:1px solid; 
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-color:rgb(72,72,72);
+}
+
+textarea {
+  padding:5px; 
+  border:1px solid; 
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-color:rgb(72,72,72);
+}
+
+input[type=submit] {
+  padding:5px 15px; 
+  background:whitesmoke; 
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+}
+
+.form-inline {
+  margin-right:4px;
 }

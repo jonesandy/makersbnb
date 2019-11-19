@@ -1,8 +1,15 @@
 
 <form action='/listings' id="listingform" method='post'>
-  <input type='text' placeholder='Insert name' name='name'>
-  <input type='text' placeholder="Price/N" name="price">
+  <h3>Hosts can use this page to list their space</h3>
+  <br>
+  Insert name: <input type='text' placeholder='Name' name='name'>
+  <br>
+  <br>
+  Insert price per night: £<input type='text' placeholder="Price/N" name="price">
+  <br>
+  <br>
+  Enter a short description: <textarea rows="4" cols="50" placeholder="Desription" name="description" form="listingform"></textarea>
+  <br>
+  <br>
   <input type='submit' value='Submit'>
 </form>
-<textarea rows="4" cols="50" placeholder="Enter a short desription here" name="description" form="listingform"></textarea>
-

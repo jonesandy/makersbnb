@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<ul>
 
-  <%@listings.each do |listing|%>
-  <div class="single listing">
-    <p class='name'> Name: <%=listing.name%> <p>
-    <p class='description'> Description: <%=listing.description%> <p>
-    <p class='price'> Price per night: <%=listing.price%> <p>
+
+<%@listings.each do |listing|%>
+  <ul>
+  <div class="single_listing">
+    <p class="name"> <%=listing.name%> </p>
+    <p class="description"> <%=listing.description%> </p>
+    <p class="price"> Price per night: £<%=listing.price%> </p>
   </div>  
-  <%end%>
+  </ul>
+<%end%>
 
-</ul>
+
