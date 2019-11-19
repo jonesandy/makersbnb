@@ -39,5 +39,20 @@ class MakersBnb < Sinatra::Base
     erb :listings
   end
 
+  post '/profile' do
+    Account.create(
+      email: params[:email],
+      password: params[:password],
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+    )
+    redirect '/profile'
+  end
+
+
+  get '/profile' do
+    erb :profile
+  end
+
   run! if app_file == $0
 end
