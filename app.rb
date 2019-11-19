@@ -41,23 +41,23 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/profile' do
-    user = Account.create(
+    @user = Account.create(
       email: params[:email],
       password: params[:password],
       first_name: params[:first_name],
-      last_name: params[:last_name],
+      last_name: params[:last_name]
     )
-    if user.id == nil 
+    if @user.id == nil 
       redirect '/'
     else
-      session[:user] = user
+      session[:user] = @user.id
       redirect '/profile'
     end
   end
 
 
   get '/profile' do
-    @user = session[:user]
+    @user = Account.first(id: session[:user])
     erb :profile
   end
 

@@ -10,7 +10,11 @@ feature 'Account' do
         fill_in 'last_name', with: 'Vader'
         click_on 'Create Account'
       end
-      expect(page).to have_text("Welcome Darth")
+      
+      within '.title' do
+        expect(page).to have_text("Welcome Darth")
+      end
     end
+    
   end
 end
