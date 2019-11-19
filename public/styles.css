@@ -16,6 +16,10 @@ nav li{
   display: inline-block;
 }
 
+nav ul {
+  display: flex;
+}
+
 li {
   margin: auto;
   font-size: 20px;
@@ -23,6 +27,7 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 h1 {
