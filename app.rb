@@ -18,9 +18,7 @@ require 'sinatra/base'
 class MakersBnb < Sinatra::Base
 
   get '/' do
-
     erb :home
-
   end
 
   get '/listings/new' do
@@ -30,6 +28,8 @@ class MakersBnb < Sinatra::Base
   post '/listings' do
     Listing.create(
       name: params[:name],
+      description: params[:description],
+      price: params[:price]
     )
     redirect '/listings'
   end
