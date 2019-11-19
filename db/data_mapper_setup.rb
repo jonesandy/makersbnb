@@ -12,6 +12,5 @@ DataMapper.setup(:default, "postgres://localhost/makers_bnb_#{ENV['BNB']}")
 #This checks the models for validity and initializes all properties associated with relationships.
 DataMapper.finalize
 
-#create tables if they don't exist
-
-DataMapper.auto_upgrade!
+# create tables if they don't exist
+DataMapper.auto_migrate!
