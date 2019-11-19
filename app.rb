@@ -7,7 +7,7 @@ require 'dm-postgres-adapter'
 
 
 require './db/data_mapper_setup'
-require './lib/user'
+require './lib/Account'
 require './lib/listing'
 
 
@@ -18,9 +18,7 @@ require 'sinatra/base'
 class MakersBnb < Sinatra::Base
 
   get '/' do
-
     erb :home
-
   end
 
   get '/listings/new' do
