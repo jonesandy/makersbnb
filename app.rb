@@ -18,7 +18,6 @@ require 'sinatra/base'
 class MakersBnb < Sinatra::Base
 
   get '/listings/new' do
-
     erb :new
   end
 
@@ -28,8 +27,6 @@ class MakersBnb < Sinatra::Base
     )
     redirect '/listings'
   end
-
-
 
   get '/listings' do
     @listings = Listing.all
