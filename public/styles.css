@@ -1,0 +1,43 @@
+html {
+  background-color: lightblue;
+}
+
+header {
+  width: 100%;
+  overflow: auto;
+}
+
+nav {
+  margin: auto;
+  width: 50%;
+}
+
+nav li{
+  display: inline-block;
+}
+
+nav ul {
+  display: flex;
+}
+
+li {
+  margin: auto;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.heroText {
+  text-align: center;
+}
+
+.heroText h1 {
+  margin-bottom: 0px;
+}
