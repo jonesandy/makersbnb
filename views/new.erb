@@ -1,6 +1,8 @@
 <form action='/listings' id="listingform" method='post'>
   <input type='text' placeholder='Insert name' name='name'>
-  <input type='text' placeholder="Price/N" name="price">
+  <input type='text' placeholder="Price/N" name="price"> <br>
+  <input type="date" name="start_date" value=<%= Time.now.strftime('%Y-%m-%d') %>>  <br>
+  <input type="date" name="end_date" value="<%=(Time.now.year+1)%>-<%=Time.now.month%>-<%=Time.now.day%>" >
   <input type='submit' value='Submit'>
 </form>
 <textarea rows="4" cols="50" placeholder="Enter a short desription here" name="description" form="listingform"></textarea>

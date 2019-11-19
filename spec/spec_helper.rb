@@ -7,6 +7,7 @@ require 'capybara/rspec'
 require 'rspec'
 require 'data_mapper'
 require 'database_cleaner'
+require 'features/listing_helpers'
 
 Capybara.app = MakersBnb
 
