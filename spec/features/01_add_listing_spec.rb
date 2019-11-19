@@ -8,9 +8,9 @@ feature 'add a new listing' do
     fill_in('price', with: '30')
     click_button('Submit')
     
-    expect(page).to have_css('ul', :text => 'House number one')
-    expect(page).to have_css('ul', :text => 'This is the number one house, its amazing wow.')
-    expect(page).to have_css('ul', :text => 'Price per night: £30')
+    expect(page).to have_css('div', :text => 'House number one')
+    expect(page).to have_css('div', :text => 'This is the number one house, its amazing wow.')
+    expect(page).to have_css('div', :text => 'Price per night: £30')
 
   end
 end

@@ -4,7 +4,7 @@ feature 'view all listings' do
         Listing.create(name: 'test listing four')
 
         visit '/listings'
-        expect(page).to have_css('ul', :text => "test listing three")
-        expect(page).to have_css('ul', :text => "test listing four")
+        expect(page).to have_css('div', :text => "test listing three")
+        expect(page).to have_css('div', :text => "test listing four")
     end
 end

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
-
+<h3>Current listings</h3>
 <%@listings.each do |listing|%>
-  <ul>
+
   <div class="single_listing">
     <p class="name"> <%=listing.name%> </p>
     <p class="description"> <%=listing.description%> </p>
     <p class="price"> Price per night: £<%=listing.price%> </p>
   </div>  
-  </ul>
+
 <%end%>
 
 
