@@ -16,6 +16,7 @@ require './lib/listing'
 require 'sinatra/base'
 
 class MakersBnb < Sinatra::Base
+  enable :sessions
 
   get '/' do
     erb :home
@@ -40,17 +41,23 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/profile' do
-    Account.create(
+    user = Account.create(
       email: params[:email],
       password: params[:password],
       first_name: params[:first_name],
       last_name: params[:last_name],
     )
-    redirect '/profile'
+    if user.id == nil 
+      redirect '/'
+    else
+      session[:user] = user
+      redirect '/profile'
+    end
   end
 
 
   get '/profile' do
+    @user = session[:user]
     erb :profile
   end
 
