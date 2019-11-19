@@ -1,8 +1,8 @@
-"Insert the name of your property"
 
-<form action='/listings' method='post'>
-  <input type='text' placeholder='Insert name' name='name'/>
-  <input type='submit' value='Submit'/>
+<form action='/listings' id="listingform" method='post'>
+  <input type='text' placeholder='Insert name' name='name'>
+  <input type='text' placeholder="Price/N" name="price">
+  <input type='submit' value='Submit'>
 </form>
-
+<textarea rows="4" cols="50" placeholder="Enter a short desription here" name="description" form="listingform"></textarea>
 
