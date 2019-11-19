@@ -5,6 +5,7 @@
 
 <div>
   <form class="sign_up" action="/profile" method="post">
+    <h1> <%=session[:invalid_email]%> </h1>
     <input type="email" name="email" placeholder="Enter Email">
     <input type="password" name="password" placeholder="Enter Password">
     <input type="text" name="first_name" placeholder="Enter First Name">

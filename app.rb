@@ -4,7 +4,7 @@ ENV["BNB"] ||= "dev"
 require 'data_mapper'
 require 'sinatra'
 require 'dm-postgres-adapter'
-
+require 'sinatra/flash'
 
 require './db/data_mapper_setup'
 require './lib/Account'
@@ -19,6 +19,7 @@ class MakersBnb < Sinatra::Base
   enable :sessions
 
   get '/' do
+
     erb :home
   end
 
@@ -41,13 +42,15 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/profile' do
+    session[:invalid_email] = nil
     @user = Account.create(
       email: params[:email],
       password: params[:password],
       first_name: params[:first_name],
       last_name: params[:last_name]
     )
-    if @user.id == nil 
+    if @user.id == nil
+      session[:invalid_email] = "Email Already In Use"
       redirect '/'
     else
       session[:user] = @user.id
