@@ -7,10 +7,13 @@ require 'capybara/rspec'
 require 'rspec'
 require 'data_mapper'
 require 'database_cleaner'
+require 'simplecov'
+require 'simplecov-console'
 
 Capybara.app = MakersBnb
 
-
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([SimpleCov::Formatter::Console,])
+SimpleCov.start
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

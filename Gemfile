@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.5'
 
+gem 'launchy'
 gem 'rake'
 gem 'rubocop'
 gem 'sinatra'
@@ -12,4 +13,6 @@ group :test do
   gem 'rspec'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
 end
