@@ -13,4 +13,5 @@ DataMapper.setup(:default, "postgres://localhost/makers_bnb_#{ENV['BNB']}")
 DataMapper.finalize
 
 #create tables if they don't exist
-# DataMapper.auto_upgrade!
+
+DataMapper.auto_upgrade!
