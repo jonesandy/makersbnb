@@ -2,13 +2,11 @@
 <ul>
 
   <%@listings.each do |listing|%>
-  <li>Name: <%=listing.name%>
-    <br>
-    Description: <%=listing.description%>
-    <br>
-    Price per night: <%=listing.price%>
-    <br>
-  </li>
+  <div class="single listing">
+    <p class='name'> Name: <%=listing.name%> <p>
+    <p class='description'> Description: <%=listing.description%> <p>
+    <p class='price'> Price per night: <%=listing.price%> <p>
+  </div>  
   <%end%>
 
 </ul>
