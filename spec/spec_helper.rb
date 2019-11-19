@@ -1,4 +1,4 @@
-ENV['RACK_ENV'] = 'test'
+ENV['BNB'] = 'test'
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
@@ -25,6 +25,10 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
   end
+
+  # config.before(:each) do
+  #   DatabaseCleaner.start
+  # end
 
   config.before(:each) do
     DatabaseCleaner.start

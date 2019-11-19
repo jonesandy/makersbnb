@@ -1,4 +1,4 @@
-ENV["RACK_ENV"] ||= "dev"
+ENV["BNB"] ||= "dev"
 #if not under rspec 'test' then set it to 'development'
 
 require 'data_mapper'
@@ -32,10 +32,6 @@ class MakersBnb < Sinatra::Base
       name: params[:name],
     )
     redirect '/listings'
-  end
-
-  get '/listings' do
-    erb :listings
   end
 
   get '/listings' do
