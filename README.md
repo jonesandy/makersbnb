@@ -62,6 +62,13 @@ As a Host
 So I can arrange my spaces properly
 I want to set the available dates of my property (up to 12 months from now on).
 ```
+
+## Minimum viable product (MVP)
+
+The first three user stories have been identified as essential to delivering the MVP. Acceptance criteria included: 
+ - the user (guest) can see a list of postings;
+ - the user (host) can input details about the listing and save the details added.
+
 ## Setup
 
 *create database*
@@ -74,3 +81,5 @@ CREATE DATABASE makers_bnb_test;
 ```
 <!-- - `rackup`
 - Using a web browser visit the relevant localhost -->
+
+Simplecov has been added to ensure test coverage.
