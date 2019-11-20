@@ -9,6 +9,6 @@ class Account
   property :email, String, :unique => true
   property :password, String, :length => 6..25
 
-  
+  has n, :listings
 
 end
