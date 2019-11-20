@@ -5,9 +5,9 @@
     <br>
     Description: <%=listing.description%>
     <br>
-    Price per night: <%=listing.price%>
+    Price per night: £<%=listing.price%>
     <br>
-    Available from <%=listing.start_date %> to <%= listing.end_date %>
+    Available from <%=flip_date(listing.start_date) %> to <%= flip_date(listing.end_date) %>
   </li>
   <%end%>
 
