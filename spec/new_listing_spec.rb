@@ -2,7 +2,7 @@
 describe 'listing' do
   before(:each)do
     Listing.create(name: 'test name', description: 'test description', price: 30,
-      start_date: '2019-12-23', end_date: '2020-01-23' )
+      start_date: '2019-12-23', end_date: '2020-01-23' , account_id: 1)
   end
 
   it 'adds a new listing to the database' do
