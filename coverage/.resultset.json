@@ -1,19 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Desktop/gitprojects/makersBnB/makersbnb/spec/features/01_add_listing_spec.rb": [
+      "/Users/Sara/Projects/MAKERS/6. MakersBnB/makersbnb/spec/features/01_add_listing_spec.rb": [
         1,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/student/Desktop/gitprojects/makersBnB/makersbnb/spec/listing_spec.rb": [
         1,
         null,
         1,
@@ -22,16 +12,11 @@
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        null,
-        null,
         null,
         null,
         null
       ],
-      "/Users/student/Desktop/gitprojects/makersBnB/makersbnb/spec/new_listing_spec.rb": [
+      "/Users/Sara/Projects/MAKERS/6. MakersBnB/makersbnb/spec/new_listing_spec.rb": [
         null,
         1,
         1,
@@ -51,6 +36,6 @@
         null
       ]
     },
-    "timestamp": 1574248211
+    "timestamp": 1574249878
   }
 }
