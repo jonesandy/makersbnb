@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/andrewjones/dev/makersbnb/spec/Account_spec.rb": [
+      "/Users/edcourage/Projects/afternoon_work_makers/makers_bnb/makersbnb/spec/Account_spec.rb": [
         1,
         null,
         1,
@@ -28,23 +28,9 @@
         null,
         null
       ],
-      "/Users/andrewjones/dev/makersbnb/spec/features/01_add_listing_spec.rb": [
+      "/Users/edcourage/Projects/afternoon_work_makers/makers_bnb/makersbnb/spec/features/01_add_listing_spec.rb": [
         1,
         null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/andrewjones/dev/makersbnb/spec/features/creating_new_account_spec.rb": [
-        1,
         1,
         1,
         1,
@@ -53,17 +39,10 @@
         1,
         1,
         1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
         null,
         null,
         null,
         1,
-        null,
         1,
         1,
         1,
@@ -73,9 +52,6 @@
         1,
         1,
         1,
-        null,
-        null,
-        null,
         null,
         null,
         null,
@@ -83,7 +59,32 @@
         null,
         null
       ],
-      "/Users/andrewjones/dev/makersbnb/spec/new_listing_spec.rb": [
+      "/Users/edcourage/Projects/afternoon_work_makers/makers_bnb/makersbnb/spec/features/creating_new_account_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/edcourage/Projects/afternoon_work_makers/makers_bnb/makersbnb/spec/new_listing_spec.rb": [
         null,
         1,
         1,
@@ -103,10 +104,6 @@
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1574266531
-=======
-    "timestamp": 1574265208
->>>>>>> 61bb9424425e8c533915c5418e8c94b382100c25
+    "timestamp": 1574270160
   }
 }

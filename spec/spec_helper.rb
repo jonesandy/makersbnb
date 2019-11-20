@@ -9,8 +9,8 @@ require 'data_mapper'
 require 'database_cleaner'
 require 'simplecov'
 require 'simplecov-console'
-require 'features/listing_helpers'
-
+require 'features/web_helpers'
+require 'features/db_helpers'
 Capybara.app = MakersBnb
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([SimpleCov::Formatter::Console,])
