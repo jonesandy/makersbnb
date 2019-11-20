@@ -16,7 +16,6 @@ class MakersBnb < Sinatra::Base
   enable :sessions
 
   get '/' do
-
     erb :home
   end
 
@@ -42,12 +41,13 @@ class MakersBnb < Sinatra::Base
 
   post '/profile' do
     session[:invalid_email] = nil
+
     @user = Account.create(
       email: params[:email],
       password: params[:password],
       first_name: params[:first_name],
-      last_name: params[:last_name]
-    )
+      last_name: params[:last_name])
+
     if @user.id == nil
       session[:invalid_email] = "Email Already In Use"
       redirect '/'
@@ -60,7 +60,27 @@ class MakersBnb < Sinatra::Base
 
   get '/profile' do
     @user = Account.first(id: session[:user])
+    p 'PROFILE USER:'
+    p @user
     erb :profile
+  end
+
+  get '/log-in' do
+    erb :'log-in'
+  end
+
+  post '/log-in' do
+    @user = Account.first(:email => params[:email])
+    p "THE USER IS :"
+    p @user
+    if @user.password == params[:password]
+      p 'RIGHT PASSWORD'
+      session[:user] = @user.id
+      redirect '/profile'
+    else
+      p 'WRONG PASSWORD'
+      redirect '/log-in'
+    end
   end
 
   run! if app_file == $0

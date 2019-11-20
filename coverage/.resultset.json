@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/haru/Projects/week6/makersbnb/spec/Account_spec.rb": [
+      "/Users/student/Desktop/gitprojects/makersBnB/makersbnb/spec/Account_spec.rb": [
         1,
         null,
         1,
@@ -28,7 +28,7 @@
         null,
         null
       ],
-      "/Users/haru/Projects/week6/makersbnb/spec/features/01_add_listing_spec.rb": [
+      "/Users/student/Desktop/gitprojects/makersBnB/makersbnb/spec/features/01_add_listing_spec.rb": [
         1,
         null,
         1,
@@ -43,7 +43,7 @@
         null,
         null
       ],
-      "/Users/haru/Projects/week6/makersbnb/spec/features/02_creating_new_account_spec.rb": [
+      "/Users/student/Desktop/gitprojects/makersBnB/makersbnb/spec/features/02_creating_new_account_spec.rb": [
         1,
         1,
         1,
@@ -83,26 +83,33 @@
         null,
         null
       ],
-      "/Users/haru/Projects/week6/makersbnb/spec/features/03_user_signing_in_and_out_spec.rb": [
+      "/Users/student/Desktop/gitprojects/makersBnB/makersbnb/spec/features/03_user_signing_in_and_out_spec.rb": [
         1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
         1,
         1,
         1,
         1,
         null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
         null,
+        1,
+        1,
         null,
         null,
         null,
         null
       ],
-      "/Users/haru/Projects/week6/makersbnb/spec/new_listing_spec.rb": [
+      "/Users/student/Desktop/gitprojects/makersBnB/makersbnb/spec/new_listing_spec.rb": [
         null,
         1,
         1,
@@ -122,6 +129,6 @@
         null
       ]
     },
-    "timestamp": 1574261456
+    "timestamp": 1574268453
   }
 }
