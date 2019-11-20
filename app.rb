@@ -1,18 +1,13 @@
 ENV["BNB"] ||= "dev"
-#if not under rspec 'test' then set it to 'development'
+#if not under rspec 'test' then set it to 'dev'
 
+require './helpers/flip_date'
 require 'data_mapper'
 require 'sinatra'
 require 'dm-postgres-adapter'
-
-
 require './db/data_mapper_setup'
 require './lib/user'
 require './lib/listing'
-
-
-
-#above are moduls
 require 'sinatra/base'
 
 class MakersBnb < Sinatra::Base
@@ -29,7 +24,9 @@ class MakersBnb < Sinatra::Base
     Listing.create(
       name: params[:name],
       description: params[:description],
-      price: params[:price]
+      price: params[:price],
+      start_date: params[:start_date],
+      end_date: params[:end_date]
     )
     redirect '/listings'
   end

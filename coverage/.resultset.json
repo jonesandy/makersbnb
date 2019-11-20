@@ -4,34 +4,6 @@
       "/Users/Sara/Projects/MAKERS/6. MakersBnB/makersbnb/spec/features/01_add_listing_spec.rb": [
         1,
         null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/Sara/Projects/MAKERS/6. MakersBnB/makersbnb/spec/features/02_view_listings_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Sara/Projects/MAKERS/6. MakersBnB/makersbnb/spec/listing_spec.rb": [
         1,
         null,
         1,
@@ -40,11 +12,6 @@
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        null,
-        null,
         null,
         null,
         null
@@ -53,15 +20,22 @@
         null,
         1,
         1,
+        1,
+        null,
+        null,
+        null,
+        1,
         null,
         1,
         1,
-        0,
-        0,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ]
     },
-    "timestamp": 1574245535
+    "timestamp": 1574249878
   }
 }

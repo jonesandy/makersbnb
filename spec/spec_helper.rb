@@ -9,6 +9,7 @@ require 'data_mapper'
 require 'database_cleaner'
 require 'simplecov'
 require 'simplecov-console'
+require 'features/listing_helpers'
 
 Capybara.app = MakersBnb
 
