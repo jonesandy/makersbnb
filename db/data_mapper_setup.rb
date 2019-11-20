@@ -2,7 +2,7 @@ require 'data_mapper'
 require 'dm-postgres-adapter'
 
 #todo - add model files
-require_relative '../lib/user'
+require_relative '../lib/Account'
 require_relative '../lib/listing'
 
 DataMapper.setup(:default, "postgres://localhost/makers_bnb_#{ENV['BNB']}")

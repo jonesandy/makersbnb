@@ -13,12 +13,17 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/listings">View Listings</a></li>
+          <% if session[:user] != nil %>
           <li><a href="/listings/new">New Listing</a></li>
+          <% end %>
         </ul>
       </nav>
     </header>
 
+
+
       <%= yield %>
 
   </body>
+
 </html>
