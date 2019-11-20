@@ -15,6 +15,8 @@
           <li><a href="/listings">View Listings</a></li>
           <% if session[:user] != nil %>
           <li><a href="/listings/new">New Listing</a></li>
+          <% else %>
+          <li><a href="/log-in" id ='log_in'> Log In </a></li> 
           <% end %>
         </ul>
       </nav>

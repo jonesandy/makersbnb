@@ -1,7 +1,6 @@
 ENV['BNB'] = 'test'
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
-
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
@@ -9,7 +8,7 @@ require 'data_mapper'
 require 'database_cleaner'
 require 'simplecov'
 require 'simplecov-console'
-require 'features/listing_helpers'
+require 'features/bnb_helpers'
 
 Capybara.app = MakersBnb
 
