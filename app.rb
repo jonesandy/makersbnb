@@ -71,6 +71,8 @@ class MakersBnb < Sinatra::Base
     @user = Account.first(id: session[:user])
     @listings = Listing.all(account_id: session[:user])
     @bookings = individual_user_bookings_and_listing_array(user_id: session[:user])
+    @booking_requests_array = booking_requests_array(user_id: session[:user])
+    p @booking_requests_array
     erb :profile
   end
 

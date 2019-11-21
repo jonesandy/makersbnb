@@ -6,18 +6,42 @@
   <h3>Your Listings</h3>
   <%if @listings.count == 0 %>
     <p class="noListings"> You Have No Listings... yet!🏖 </p>
-    <% else %>
-  <%@listings.each do |listing|%>
+  <% else %>
+    <%@listings.each do |listing|%>
 
-    <div class="single_listing">
-      <p class="name"> <%=listing.name%> </p>
-      <p class="description"> <%=listing.description%> </p>
-      <p class="price"> Price per night: £<%=listing.price%> </p>
-      <p class="date"> Available from <%=flip_date(listing.start_date) %> to <%= flip_date(listing.end_date) %> </p>
-    </div>
+      <div class="single_listing">
+        <p class="name"> <%=listing.name%> </p>
+        <p class="description"> <%=listing.description%> </p>
+        <p class="price"> Price per night: £<%=listing.price%> </p>
+        <p class="date"> Available from <%=flip_date(listing.start_date) %> to <%= flip_date(listing.end_date) %> </p>
+      </div>
 
+    <%end%>
   <%end%>
+</div>
+
+<div class="yourBookingRequests">
+
+  <h3>Booking Requests</h3>
+  <%if @booking_requests_array.count == 0 %>
+    <p class="noListings"> You Have No Bookings... yet!🏔 </p>
+  <% else %>
+    <%@booking_requests_array.each do |listing|%>
+
+      <%listing[1].each do |booking| %>
+        <div class="single_listing">
+          <p class="name"> <%=listing[0].name%> </p>
+          <p class="description"> <%=listing[0].description%> </p>
+          <p class="price"> Price per night: £<%=listing[0].price%> </p>
+          <p class="date"> Requested from <%=flip_date(booking.start_date) %> to <%= flip_date(booking.end_date) %> </p>
+          <p>Status: <%=booking.confirmed_status%></p>
+        </div>
+      <%end%>
+    <%end%>
   <%end%>
+
+
+
 </div>
 
 <div class="yourBookings">
