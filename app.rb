@@ -60,8 +60,6 @@ class MakersBnb < Sinatra::Base
 
   get '/profile' do
     @user = Account.first(id: session[:user])
-    p 'PROFILE USER:'
-    p @user
     erb :profile
   end
 
@@ -70,15 +68,14 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/log-in' do
+    session[:invalid_password] = nil
     @user = Account.first(:email => params[:email])
-    p "THE USER IS :"
-    p @user
+
     if @user.password == params[:password]
-      p 'RIGHT PASSWORD'
       session[:user] = @user.id
       redirect '/profile'
     else
-      p 'WRONG PASSWORD'
+      session[:invalid_password] = "Wrong password"
       redirect '/log-in'
     end
   end

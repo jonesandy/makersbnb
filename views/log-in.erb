@@ -1,4 +1,5 @@
 <form class="log_in" action="/log-in" method="post">
+  <h3><%= session[:invalid_password] %></h3>
   Email:    <input type="text" name="email" placeholder="email"><br>
   Password: <input type="text" name="password" placeholder="password">
   <input type="submit" value="Log In">

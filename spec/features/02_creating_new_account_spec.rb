@@ -5,7 +5,7 @@ feature 'Account' do
 
       within '.sign_up' do
         fill_in 'email', with: 'darthvader@empireplc.com'
-        fill_in 'password', with: 'Iamyoufather123'
+        fill_in 'password', with: 'Iamyourfather123'
         fill_in 'first_name', with: 'Darth'
         fill_in 'last_name', with: 'Vader'
         click_on 'Create Account'
@@ -22,7 +22,7 @@ feature 'Account' do
       visit '/'
       within '.sign_up' do
         fill_in 'email', with: 'darthvader@empireplc.com'
-        fill_in 'password', with: 'Iamyoufather123'
+        fill_in 'password', with: 'Iamyourfather123'
         fill_in 'first_name', with: 'Darth'
         fill_in 'last_name', with: 'Vader'
         click_on 'Create Account'
