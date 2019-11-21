@@ -88,5 +88,10 @@ class MakersBnb < Sinatra::Base
     end
   end
 
+  get '/log-out' do
+    session[:user] = nil
+    redirect '/'
+  end
+
   run! if app_file == $0
 end

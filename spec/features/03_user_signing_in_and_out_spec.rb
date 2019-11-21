@@ -50,7 +50,9 @@ feature 'Log in/out' do
 
     it 'can log out user' do
       sign_up
-      visit '/'
+
+      click_link 'log_out'
+      expect(page).to have_css('.sign_up')
     end
 
   end
