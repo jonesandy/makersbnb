@@ -1,7 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Sara/Projects/MAKERS/6. MakersBnB/makersbnb/spec/Account_spec.rb": [
+
+      "/Users/andrewjones/dev/makersbnb/spec/Account_spec.rb": [
+
         1,
         null,
         1,
@@ -28,7 +30,9 @@
         null,
         null
       ],
-      "/Users/Sara/Projects/MAKERS/6. MakersBnB/makersbnb/spec/features/01_add_listing_spec.rb": [
+
+      "/Users/andrewjones/dev/makersbnb/spec/features/01_add_listing_spec.rb": [
+
         1,
         null,
         1,
@@ -59,7 +63,9 @@
         null,
         null
       ],
-      "/Users/Sara/Projects/MAKERS/6. MakersBnB/makersbnb/spec/features/creating_new_account_spec.rb": [
+
+      "/Users/andrewjones/dev/makersbnb/spec/features/02_creating_new_account_spec.rb": [
+
         1,
         1,
         1,
@@ -84,7 +90,70 @@
         null,
         null
       ],
-      "/Users/Sara/Projects/MAKERS/6. MakersBnB/makersbnb/spec/new_listing_spec.rb": [
+
+      "/Users/andrewjones/dev/makersbnb/spec/features/03_user_signing_in_and_out_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/andrewjones/dev/makersbnb/spec/new_listing_spec.rb": [
+
         null,
         1,
         1,
@@ -104,6 +173,8 @@
         null
       ]
     },
-    "timestamp": 1574270962
+
+    "timestamp": 1574338847
+
   }
 }
