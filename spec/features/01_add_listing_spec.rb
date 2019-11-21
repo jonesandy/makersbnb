@@ -12,6 +12,7 @@ feature 'add a new listing' do
   end
 
   context "viewing listing you have posted" do
+
     scenario 'user wants to view listings they have posted' do
       create_three_accounts
       create_listings_with_account_id
@@ -22,8 +23,15 @@ feature 'add a new listing' do
         expect(page).to have_text 'Your Listings'
         expect(page).to have_text 'House number one'
       end
-
-
     end
+
+      scenario 'inform the user if they have no bookings' do
+        sign_up
+        within '.yourListings' do
+          expect(page).to have_text 'Your Listings'
+          expect(page).to have_text 'You Have No Listings... yet!🏖'
+        end
+      end
+
   end
 end
