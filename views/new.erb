@@ -9,7 +9,7 @@
   Insert price per night: £<input type='text' placeholder="Price/N" name="price">
   <br>
 
-  Available from: <input type="date" name="start_date" value="<%= DateTime.now.strftime('%Y-%m-%d') %>">  
+  Available from: <input type="date" name="start_date" value="<%= DateTime.now.strftime('%Y-%m-%d') %>">
   To: <input type="date" name="end_date" value="<%=(Time.now.year+1)%>-<%=Time.now.month%>-<%=Time.now.day%>" >
   <br>
   Enter a short description: <textarea rows="4" cols="50" placeholder="Description" name="description"></textarea>
