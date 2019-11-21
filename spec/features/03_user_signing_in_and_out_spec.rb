@@ -39,5 +39,23 @@ feature 'Log in/out' do
 
     end
 
+    it 'cannot log in with unrecognised email' do
+      Account.create(email: "darthvader@empireplc.com",
+      password: "Iamyoufather123",
+      first_name: "Darth",
+      last_name: "Vader")
+
+      visit '/'
+      click_link 'log_in'
+
+      within '.log_in' do
+        fill_in 'email', with: 'imnotdarthvader@empireplc.com'
+        fill_in 'password', with: 'Iamyourfather123'
+        click_on 'Log In'
+      end
+
+      expect(page).to have_css('h3', :text => 'Unknown email')
+    end
+
   end
 end
