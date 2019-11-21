@@ -62,10 +62,16 @@ class MakersBnb < Sinatra::Base
   get '/profile' do
     @user = Account.first(id: session[:user])
     @listings = Listing.all(account_id: session[:user])
-    @bookings = [] #Booking.all(account_id: session[:user])
+    @bookings = []
+      Booking.all(account_id: session[:user]).each do |booking|
+        @bookings << Listing.first(id: booking.listing_id)
+      end
+
+    @bookings = []
+      #Booking.all(account_id: session[:user])
     erb :profile
   end
-  
+
 
 
   get '/log-in' do
