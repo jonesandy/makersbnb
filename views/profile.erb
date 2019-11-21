@@ -28,10 +28,12 @@
   <%@bookings.each do |listing|%>
 
     <div class="single_listing">
-      <p class="name"> <%=listing.name%> </p>
-      <p class="description"> <%=listing.description%> </p>
-      <p class="price"> Price per night: £<%=listing.price%> </p>
-      <p class="date"> Available from <%=flip_date(listing.start_date) %> to <%= flip_date(listing.end_date) %> </p>
+      <p class="name"> <%=listing[0].name%> </p>
+      <p class="description"> <%=listing[0].description%> </p>
+      <p class="price"> Price per night: £<%=listing[0].price%> </p>
+      <p class="date"> Requested from <%=flip_date(listing[1].start_date) %> to <%= flip_date(listing[1].end_date) %> </p>
+      <p>Status: <%=listing[1].confirmed_status%></p>
+
     </div>
 
   <%end%>
