@@ -62,6 +62,7 @@ class MakersBnb < Sinatra::Base
   get '/profile' do
     @user = Account.first(id: session[:user])
     @listings = Listing.all(account_id: session[:user])
+    @bookings = []
     erb :profile
   end
 

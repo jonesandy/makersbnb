@@ -50,7 +50,7 @@ h1 {
 }
 
 h3 {
-  text-align: center; 
+  text-align: center;
   margin: 15px;
   font-size: 1.4em;
 }
@@ -62,6 +62,10 @@ h3 {
   text-align: left;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   background-color: whitesmoke;
+}
+
+.noListings {
+  text-align: center;
 }
 
 .name {
@@ -88,28 +92,28 @@ h3 {
 }
 
 input[type=text] {
-  padding:5px; 
-  border:1px solid; 
+  padding:5px;
+  border:1px solid;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   border-color:rgb(72,72,72);
 }
 
 textarea {
-  padding:5px; 
-  border:1px solid; 
+  padding:5px;
+  border:1px solid;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   border-color:rgb(72,72,72);
 }
 
 input[type=submit] {
-  padding:5px 15px; 
-  background:whitesmoke; 
+  padding:5px 15px;
+  background:whitesmoke;
   border:0 none;
   cursor:pointer;
   -webkit-border-radius: 5px;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 .form-inline {
