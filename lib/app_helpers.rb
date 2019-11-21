@@ -1,5 +1,5 @@
 
-def individual_user_bookings_and_listing_array(user_id:)
+def user_bookings_array(user_id:)
   listing_and_booking_array = []
   Booking.all(account_id: user_id).map do |booking|
     array = []
