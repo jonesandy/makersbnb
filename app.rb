@@ -51,7 +51,7 @@ class MakersBnb < Sinatra::Base
     @user = Account.first(id: session[:user])
     @listing = Listing.get(params[:id])
     @user.booking.create(
-      id: @listing.id,
+      listing_id: @listing.id,
       start_date: params[:start_date],
       end_date: params[:end_date]
     )

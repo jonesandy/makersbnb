@@ -17,17 +17,3 @@
   <%end%>
 </div>
 
-
-<div class="yourBookings">
-  <h3>Bookings made by you</h3>
-
-  <%@bookings.each do |booking|%>
-   <%= p @bookings%>
-    <div class="single_listing">
-      <p class="name"> <%=listing_name(booking)%> </p>
-      <p class="date"> Booked from <%=flip_date(booking.start_date) %> to <%= flip_date(booking.end_date) %> </p>
-      <p class="confirmed"> Status: <%=confirmed_status%> </p>
-    </div>
-
-  <%end%>
-</div>

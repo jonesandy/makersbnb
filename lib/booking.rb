@@ -14,11 +14,6 @@ class Booking
   belongs_to :listing
   belongs_to :account  
 
-  def listing_name(booking)
-    @name= Listing.get(id: booking.listing_id).name
-    return @name
-  end
-
   def confirmed_status
     return "Confirmed" if confirmed == true
     return "Not Confirmed" if confirmed == false
