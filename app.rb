@@ -69,6 +69,7 @@ class MakersBnb < Sinatra::Base
 
   post '/log-in' do
     session[:incorrect_password] = nil
+    session[:incorrect_email] = nil
     @user = Account.first(:email => params[:email])
 
     if @user.is_a?(Account)
