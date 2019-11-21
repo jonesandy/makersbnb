@@ -3,17 +3,18 @@
   <p>Feel at home, anywhere</p>
 </div>
 
-<% if session[:user] == nil %>
 <div>
+  <div class="flash">
+    <%flash[:invalid_email]%>
+  </div>
+
   <form class="sign_up" action="/profile" method="post">
-    <h3> <%=session[:invalid_email]%> </h3>
     <input type="email" name="email" placeholder="Enter Email"> <br>
     <input type="password" name="password" placeholder="Enter Password"> <br>
     <input type="text" name="first_name" placeholder="Enter First Name"><br>
     <input type="text" name="last_name" placeholder="Enter Last Name"><br>
     <button type="submit" name="Create Account">Create Account</button>
   </form>
-  <%end%>
 </div>
 
 <div class="homeImage">
