@@ -10,6 +10,7 @@ require 'sinatra/flash'
 require './db/data_mapper_setup'
 require './lib/Account'
 require './lib/listing'
+require './lib/booking'
 require 'sinatra/base'
 
 class MakersBnb < Sinatra::Base
@@ -41,6 +42,23 @@ class MakersBnb < Sinatra::Base
     erb :listings
   end
 
+  get '/bookings/new/:id' do
+    @listing = Listing.get(params[:id])
+    erb :booking_new
+  end
+
+  post '/bookings/new/:id' do
+    @user = Account.first(id: session[:user])
+    @listing = Listing.get(params[:id])
+    @user.booking.create(
+      id: @listing.id,
+      start_date: params[:start_date],
+      end_date: params[:end_date]
+    )
+    redirect '/profile'
+  end
+
+
   post '/profile' do
     session[:invalid_email] = nil
     @user = Account.create(
@@ -62,6 +80,7 @@ class MakersBnb < Sinatra::Base
   get '/profile' do
     @user = Account.first(id: session[:user])
     @listings = Listing.all(account_id: session[:user])
+    @bookings = Booking.all(account_id: session[:user])
     erb :profile
   end
 

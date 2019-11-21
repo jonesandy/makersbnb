@@ -14,4 +14,6 @@ class Listing
   #<Date: 2019-12-23 ((2458841j,0s,0n),+0s,2299161j)>
 
   belongs_to :account
+  has n, :booking
+
 end
