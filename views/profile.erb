@@ -25,7 +25,7 @@
   <%if @bookings.count == 0 %>
     <p class="noListings"> You Have No Bookings... yet!🏔 </p>
     <% else %>
-  <%@listings.each do |listing|%>
+  <%@bookings.each do |listing|%>
 
     <div class="single_listing">
       <p class="name"> <%=listing.name%> </p>
