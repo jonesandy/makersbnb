@@ -2,10 +2,7 @@ feature 'Log in/out' do
   describe 'logging in' do
 
     it "user can log in if have the correct password and email" do
-      Account.create(email: "darthvader@empireplc.com",
-      password: "Iamyourfather123",
-      first_name: "Darth",
-      last_name: "Vader")
+      add_darth_account
 
       visit '/'
       click_link "log_in"
@@ -21,10 +18,7 @@ feature 'Log in/out' do
     end
 
     it 'cannot log in with incorrect password but correct email' do
-      Account.create(email: "darthvader@empireplc.com",
-      password: "Iamyoufather123",
-      first_name: "Darth",
-      last_name: "Vader")
+      add_darth_account
 
       visit '/'
       click_link 'log_in'
@@ -40,10 +34,7 @@ feature 'Log in/out' do
     end
 
     it 'cannot log in with unrecognised email' do
-      Account.create(email: "darthvader@empireplc.com",
-      password: "Iamyoufather123",
-      first_name: "Darth",
-      last_name: "Vader")
+      add_darth_account
 
       visit '/'
       click_link 'log_in'
@@ -55,6 +46,11 @@ feature 'Log in/out' do
       end
 
       expect(page).to have_css('h3', :text => 'Unknown email')
+    end
+
+    it 'can log out user' do
+      sign_up
+      visit '/'
     end
 
   end

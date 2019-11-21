@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Desktop/gitprojects/makersBnB/makersbnb/spec/Account_spec.rb": [
+      "/Users/andrewjones/dev/makersbnb/spec/Account_spec.rb": [
         1,
         null,
         1,
@@ -28,7 +28,7 @@
         null,
         null
       ],
-      "/Users/student/Desktop/gitprojects/makersBnB/makersbnb/spec/features/01_add_listing_spec.rb": [
+      "/Users/andrewjones/dev/makersbnb/spec/features/01_add_listing_spec.rb": [
         1,
         null,
         1,
@@ -59,7 +59,7 @@
         null,
         null
       ],
-      "/Users/edcourage/Projects/afternoon_work_makers/makers_bnb/makersbnb/spec/features/creating_new_account_spec.rb": [
+      "/Users/andrewjones/dev/makersbnb/spec/features/02_creating_new_account_spec.rb": [
         1,
         1,
         1,
@@ -84,16 +84,13 @@
         null,
         null
       ],
-      "/Users/student/Desktop/gitprojects/makersBnB/makersbnb/spec/features/03_user_signing_in_and_out_spec.rb": [
+      "/Users/andrewjones/dev/makersbnb/spec/features/03_user_signing_in_and_out_spec.rb": [
         1,
         1,
         null,
         1,
         1,
         null,
-        null,
-        null,
-        null,
         1,
         1,
         null,
@@ -104,14 +101,11 @@
         null,
         null,
         1,
-         1,
+        1,
         null,
         null,
         1,
         1,
-        null,
-        null,
-        null,
         null,
         1,
         1,
@@ -129,9 +123,6 @@
         1,
         1,
         null,
-        null,
-        null,
-        null,
         1,
         1,
         null,
@@ -142,12 +133,17 @@
         null,
         null,
         1,
+        null,
+        null,
+        1,
+        1,
+        null,
         null,
         null,
         null,
         null
       ],
-      "/Users/student/Desktop/gitprojects/makersBnB/makersbnb/spec/new_listing_spec.rb": [
+      "/Users/andrewjones/dev/makersbnb/spec/new_listing_spec.rb": [
         null,
         1,
         1,
@@ -167,6 +163,6 @@
         null
       ]
     },
-    "timestamp": 1574270160
+    "timestamp": 1574337725
   }
 }

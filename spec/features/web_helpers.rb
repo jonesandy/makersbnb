@@ -16,10 +16,17 @@ def sign_up
 
   within '.sign_up' do
     fill_in 'email', with: 'darthvader@empireplc.com'
-    fill_in 'password', with: 'Iamyoufather123'
+    fill_in 'password', with: 'Iamyourfather123'
     fill_in 'first_name', with: 'Darth'
     fill_in 'last_name', with: 'Vader'
     click_on 'Create Account'
   end
 
+end
+
+def add_darth_account
+  Account.create(email: "darthvader@empireplc.com",
+    password: "Iamyourfather123",
+    first_name: "Darth",
+    last_name: "Vader")
 end
