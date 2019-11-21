@@ -24,7 +24,8 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/listings' do
-    Listing.create(
+    @user = Account.first(id: session[:user])
+    @user.listing.create(
       name: params[:name],
       description: params[:description],
       price: params[:price],
@@ -60,6 +61,7 @@ class MakersBnb < Sinatra::Base
 
   get '/profile' do
     @user = Account.first(id: session[:user])
+    @listings = Listing.all(account_id: session[:user])
     erb :profile
   end
 

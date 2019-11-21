@@ -13,5 +13,5 @@ class Listing
   # current start_date/end_date will return an object like below
   #<Date: 2019-12-23 ((2458841j,0s,0n),+0s,2299161j)>
 
-  # belongs_to :user
+  belongs_to :account
 end
