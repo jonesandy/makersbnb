@@ -10,5 +10,6 @@ class Account
   property :password, String, :length => 6..25
 
   has n, :listing
+  # has n, :booking
 
 end
