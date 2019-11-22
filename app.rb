@@ -95,7 +95,7 @@ class MakersBnb < Sinatra::Base
     @user = Account.first(:email => params[:email])
 
     if @user.is_a?(Account)
-      if @user.password == params[:password]
+      if @user.right_password?(email:params[:email],password:params[:password])
         session[:user] = @user.id
         redirect '/profile'
       else
