@@ -1,22 +1,19 @@
-<div class="heroText">
-  <h1>MakersBnB</h1>
-  <p>Feel at home, anywhere</p>
-</div>
 
-<div>
-  <div class="flash">
-    <%flash[:invalid_email]%>
+<main class="home">
+  <div class="hero">
+    <div class="heroText">
+      <h1>MakersBnB</h1>
+      <p>Feel at home, anywhere</p>
+    </div>
+    <div class="flash">
+      <%flash[:invalid_email]%>
+    </div>
+    <form class="sign_up" action="/profile" method="post">
+      <input type="email" name="email" placeholder="Enter Email"> <br>
+      <input type="password" name="password" placeholder="Enter Password"> <br>
+      <input type="text" name="first_name" placeholder="Enter First Name"><br>
+      <input type="text" name="last_name" placeholder="Enter Last Name"><br>
+      <button type="submit" name="Create Account">Create Account</button>
+    </form>
   </div>
-
-  <form class="sign_up" action="/profile" method="post">
-    <input type="email" name="email" placeholder="Enter Email"> <br>
-    <input type="password" name="password" placeholder="Enter Password"> <br>
-    <input type="text" name="first_name" placeholder="Enter First Name"><br>
-    <input type="text" name="last_name" placeholder="Enter Last Name"><br>
-    <button type="submit" name="Create Account">Create Account</button>
-  </form>
-</div>
-
-<div class="homeImage">
-  <img src="/beach_house.jpg" alt="me">
-</div>
+</main>

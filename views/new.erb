@@ -1,18 +1,19 @@
+<main class="newListing">
+  <h2>List your space</h2>
 
-<h3>Hosts can use this page to list their space</h3>
+  <form action='/listings' class="listingform" method='post'>
+    <br>
+    Insert name: <input type='text' placeholder='Name' name='name'>
+    <br>
 
-<form action='/listings' class="listingform" method='post'>
-  <br>
-  Insert name: <input type='text' placeholder='Name' name='name'>
-  <br>
+    Insert price per night: £<input type='text' placeholder="Price/N" name="price">
+    <br>
 
-  Insert price per night: £<input type='text' placeholder="Price/N" name="price">
-  <br>
-
-  Available from: <input type="date" name="start_date" value="<%= DateTime.now.strftime('%Y-%m-%d') %>">
-  To: <input type="date" name="end_date" value="<%=(Time.now.year+1)%>-<%=Time.now.month%>-<%=Time.now.day%>" >
-  <br>
-  Enter a short description: <textarea rows="4" cols="50" placeholder="Description" name="description"></textarea>
-  <br>
-  <input type='submit' value='Submit'>
-</form>
+    Available from: <input type="date" name="start_date" value="<%= DateTime.now.strftime('%Y-%m-%d') %>">
+    To: <input type="date" name="end_date" value="<%=(Time.now.year+1)%>-<%=Time.now.month%>-<%=Time.now.day%>" >
+    <br>
+    Enter a short description: <textarea rows="4" cols="50" placeholder="Description" name="description"></textarea>
+    <br>
+    <input type='submit' value='Submit'>
+  </form>
+</main>
