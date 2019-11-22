@@ -1,14 +1,20 @@
-<div class = "flash">
-  <% flash[:incorrect_password] %>
-  <% flash[:incorrect_email] %>
-</div>
+<main class="login">
+  <div class = "flash">
+    <% flash[:incorrect_password] %>
+    <% flash[:incorrect_email] %>
+  </div>
 
-<form class="log_in" action="/log-in" method="post">
-  Email:    <input type="text" name="email" placeholder="email"><br>
-  Password: <input type="text" name="password" placeholder="password">
-  <input type="submit" value="Log In">
-</form>
-
-<div class="homeImage">
-  <img src="/mountain_house.jpg" alt="me">
-</div>
+  <form class="log_in" action="/log-in" method="post">
+    <div>
+      <label for="email" class="formTitle">Email:</label>
+      <input id="email" class="inputLogin" type="text" name="email" placeholder="email"><br>
+    </div>
+    <div>
+      <label for="password" class="formTitle">Password:</label>
+      <input id="password" class="inputLogin" type="password" name="password" placeholder="password">
+    </div>
+    <div>
+        <input type="submit" value="Log In">
+    </div>
+  </form>
+</main>

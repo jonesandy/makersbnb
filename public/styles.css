@@ -61,6 +61,46 @@ main.home .hero{
   background-color: rgba(173, 216, 230, 85%);
 }
 
+main.login {
+  height: 90vh;
+  background-image: url('/mountain_house.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main.login .log_in{
+  border-radius: 25px;
+  width: 40%;
+  height: 40%;
+  background-color: rgb(173, 216, 230);
+  background-color: rgba(173, 216, 230, 85%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main.login .inputLogin{
+  margin: 0px;
+  border: 1px solid;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-color: rgb(72,72,72);
+}
+
+main.login div {
+  margin: 25px 0;
+}
+
+.formTitle {
+  float: left;
+  width: 100px;
+  text-align: right;
+  padding-right: 10px;
+}
+
 .heroText {
   text-align: center;
 }
@@ -173,4 +213,15 @@ input[type=submit], button[type=submit] {
 /* When moving the mouse over the close button */
 .closebtn:hover {
   color: black;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
 }
