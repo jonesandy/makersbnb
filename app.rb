@@ -55,6 +55,23 @@ class MakersBnb < Sinatra::Base
     redirect '/profile'
   end
 
+  post '/bookings/decision/:id' do
+    booking = Booking.get(params[:id])
+    if params[:decision] == "accept"
+      "Accept"
+      # Do something here:
+      # booking.status = true
+      #send the Email
+      #block the dates
+    else #aka params[:decision] == "decline"
+      "Decline"
+      # booking.status = false
+      #send a different email
+    end
+    redirect '/profile'
+ end
+
+
 
   post '/profile' do
     # flash[:invalid_email] = nil
@@ -74,14 +91,13 @@ class MakersBnb < Sinatra::Base
     end
   end
 
-
   get '/profile' do
     @user = Account.first(id: session[:user])
     @listings = Listing.all(account_id: session[:user])
     @bookings = individual_user_bookings_and_listing_array(user_id: session[:user])
+    @requests = individual_user_requests_and_listing_array(user_id: session[:user])
     erb :profile
   end
-
 
 
   get '/log-in' do
@@ -89,8 +105,6 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/log-in' do
-    session[:incorrect_password] = nil
-    session[:incorrect_email] = nil
     @user = Account.first(:email => params[:email])
 
     if @user.is_a?(Account)

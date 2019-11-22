@@ -39,3 +39,30 @@
   <%end%>
   <%end%>
 </div>
+
+<div class="yourRequests">
+  <h3>Your Requests</h3>
+  <%if @requests.count == 0 %>
+    <p class="noListings"> You Have No Requests... yet!🏔 </p>
+    <% else %>
+  <%@requests.each do |listing|%>
+
+    <div class="single_listing">
+      <p class="name"> <%=listing[0].name%> </p>
+      <p class="description"> <%=listing[0].description%> </p>
+      <p class="price"> Price per night: £<%=listing[0].price%> </p>
+      <p class="user"> Requested by: <%=listing[2].first_name%> <%=listing[2].last_name%></p>
+      <p class="date"> Requested from <%=flip_date(listing[1].start_date) %> to <%= flip_date(listing[1].end_date) %> </p>
+      <p>Status: <%=listing[1].confirmed_status%></p>
+
+      <form class="accept_or_decline_request" action=<%= "/bookings/decision/#{listing[1].id}" %> method="post">
+         <input type="submit" name="decision" value="accept">
+         <input type="submit" name="decision" value="decline">
+     </form>
+    </div>
+
+
+
+  <%end%>
+  <%end%>
+</div>
