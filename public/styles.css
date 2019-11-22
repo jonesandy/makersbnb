@@ -45,6 +45,22 @@ img {
   width: 100%;
 }
 
+main.home {
+  height: 90vh;
+  background-image: url('/beach_house.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main.home .hero{
+  border-radius: 25px;
+  width: 40%;
+  background-color: rgb(173, 216, 230);
+  background-color: rgba(173, 216, 230, 85%);
+}
+
 .heroText {
   text-align: center;
 }
