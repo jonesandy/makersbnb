@@ -19,4 +19,9 @@ class Booking
     return "Not Confirmed" if @confirmed == false
   end
 
+  def self.confirm_booking(booking_id:)
+    self.get(booking_id).update(confirmed: true)
+  end
+
+
 end

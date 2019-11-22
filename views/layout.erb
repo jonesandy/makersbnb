@@ -18,15 +18,13 @@
           <li><a href="/profile">Profile</a></li>
           <li><a href="/log-out" id="log_out">Log Out</a></li>
           <% else %>
-          <li><a href="/log-in" id ='log_in'> Log In </a></li> 
+          <li><a href="/log-in" id ='log_in'> Log In </a></li>
 
           <% end %>
         </ul>
       </nav>
     </header>
-
-
-
+      <%= partial :flash %>
       <%= yield %>
 
   </body>

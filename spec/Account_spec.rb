@@ -1,4 +1,4 @@
-require 'Account'
+# require 'Account'
 
 describe Account do
 
@@ -16,7 +16,7 @@ describe Account do
 
     it 'failed due to email not unique' do
       test_account = Account.create(email: "test@test.com", password: "password123", first_name: "Test", last_name: "Person")
-      test_account = Account.create(email: "test@test.com", password: "password123", first_name: "Test", last_name: "Person") 
+      test_account = Account.create(email: "test@test.com", password: "password123", first_name: "Test", last_name: "Person")
       expect( Account.all.count).to eq(1)
     end
 

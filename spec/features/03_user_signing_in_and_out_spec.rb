@@ -29,7 +29,7 @@ feature 'Log in/out' do
         click_on 'Log In'
       end
 
-      expect(page).to have_css('h3', :text => 'Wrong password')
+      expect(page).to have_css('.flash_alert', :text => 'Wrong password')
 
     end
 
@@ -45,7 +45,7 @@ feature 'Log in/out' do
         click_on 'Log In'
       end
 
-      expect(page).to have_css('h3', :text => 'Unknown email')
+      expect(page).to have_css('.flash_alert', :text => 'Unknown email')
     end
 
     it 'can log out user' do

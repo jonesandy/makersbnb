@@ -1,21 +1,18 @@
 ENV["BNB"] ||= "dev"
 #if not under rspec 'test' then set it to 'dev'
 
-require './helpers/flip_date'
-require 'data_mapper'
-require 'sinatra'
-require 'dm-postgres-adapter'
 require 'sinatra/flash'
-
-require './db/data_mapper_setup'
-require './lib/Account'
-require './lib/listing'
-require './lib/booking'
-require 'sinatra/base'
-require './lib/app_helpers'
+require 'sinatra/partial'
+require_relative 'require_helper_app'
 
 class MakersBnb < Sinatra::Base
   enable :sessions
+  #the below 4 lines are convention
+  register Sinatra::Flash
+  register Sinatra::Partial
+  set :partial_template_engine, :erb
+  enable :partial_underscores
+
 
   get '/' do
     erb :home
@@ -58,9 +55,14 @@ class MakersBnb < Sinatra::Base
     redirect '/profile'
   end
 
+  post '/booking/appoved' do
+    Booking.confirm_booking(booking_id: params[:booking_id])
+    redirect '/profile'
+
+  end
 
   post '/profile' do
-    session[:invalid_email] = nil
+    # flash[:invalid_email] = nil
 
     @user = Account.create(
       email: params[:email],
@@ -69,7 +71,7 @@ class MakersBnb < Sinatra::Base
       last_name: params[:last_name])
 
     if @user.id == nil
-      session[:invalid_email] = "Email Already In Use"
+      flash[:invalid_email] = "Email Already In Use"
       redirect '/'
     else
       session[:user] = @user.id
@@ -77,23 +79,19 @@ class MakersBnb < Sinatra::Base
     end
   end
 
-
   get '/profile' do
     @user = Account.first(id: session[:user])
     @listings = Listing.all(account_id: session[:user])
-    @bookings = individual_user_bookings_and_listing_array(user_id: session[:user])
+    @bookings = user_bookings_array(user_id: session[:user])
+    @booking_requests_array = booking_requests_array(user_id: session[:user])
     erb :profile
   end
-
-
 
   get '/log-in' do
     erb :'log-in'
   end
 
   post '/log-in' do
-    session[:incorrect_password] = nil
-    session[:incorrect_email] = nil
     @user = Account.first(:email => params[:email])
 
     if @user.is_a?(Account)
@@ -101,11 +99,11 @@ class MakersBnb < Sinatra::Base
         session[:user] = @user.id
         redirect '/profile'
       else
-        session[:incorrect_password] = "Wrong password"
+        flash[:incorrect_password] = "Wrong password"
         redirect '/log-in'
       end
     else
-      session[:incorrect_email] = "Unknown email"
+      flash[:incorrect_email] = "Unknown email"
       redirect '/log-in'
     end
   end
