@@ -11,7 +11,7 @@ feature 'Account' do
     it "does not create two account with the same email" do
       Account.create(email:'darthvader@empireplc.com')
       sign_up
-      within '.sign_up' do
+      within '.flash_alert' do
         expect(page).to have_text("Email Already In Use")
       end
 

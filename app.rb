@@ -1,10 +1,18 @@
 ENV["BNB"] ||= "dev"
 #if not under rspec 'test' then set it to 'dev'
 
+require 'sinatra/flash'
+require 'sinatra/partial'
 require_relative 'require_helper_app'
 
 class MakersBnb < Sinatra::Base
   enable :sessions
+  #the below 4 lines are convention
+  register Sinatra::Flash
+  register Sinatra::Partial
+  set :partial_template_engine, :erb
+  enable :partial_underscores
+
 
   get '/' do
     erb :home
@@ -49,7 +57,7 @@ class MakersBnb < Sinatra::Base
 
 
   post '/profile' do
-    session[:invalid_email] = nil
+    # flash[:invalid_email] = nil
 
     @user = Account.create(
       email: params[:email],
@@ -58,7 +66,7 @@ class MakersBnb < Sinatra::Base
       last_name: params[:last_name])
 
     if @user.id == nil
-      session[:invalid_email] = "Email Already In Use"
+      flash[:invalid_email] = "Email Already In Use"
       redirect '/'
     else
       session[:user] = @user.id
@@ -81,8 +89,6 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/log-in' do
-    session[:incorrect_password] = nil
-    session[:incorrect_email] = nil
     @user = Account.first(:email => params[:email])
 
     if @user.is_a?(Account)
@@ -90,11 +96,11 @@ class MakersBnb < Sinatra::Base
         session[:user] = @user.id
         redirect '/profile'
       else
-        session[:incorrect_password] = "Wrong password"
+        flash[:incorrect_password] = "Wrong password"
         redirect '/log-in'
       end
     else
-      session[:incorrect_email] = "Unknown email"
+      flash[:incorrect_email] = "Unknown email"
       redirect '/log-in'
     end
   end
