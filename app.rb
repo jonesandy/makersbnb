@@ -47,6 +47,12 @@ class MakersBnb < Sinatra::Base
     redirect '/profile'
   end
 
+  post '/booking/appoved' do
+    Booking.confirm_booking(booking_id: params[:booking_id])
+    redirect '/profile'
+
+  end
+
   post '/profile' do
     session[:invalid_email] = nil
 

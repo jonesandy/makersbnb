@@ -34,7 +34,11 @@
           <p class="description"> <%=listing[0].description%> </p>
           <p class="price"> Price per night: £<%=listing[0].price%> </p>
           <p class="date"> Requested from <%=flip_date(booking.start_date) %> to <%= flip_date(booking.end_date) %> </p>
-          <p>Status: <%=booking.confirmed_status%></p>
+          <p id='bookingStatus'> Status: <%=booking.confirmed_status%></p>
+          <form  action="/booking/appoved" method="post">
+            <button type="submit" name="booking_id" value="<%=booking.id%>">Approve Booking</button>
+          </form>
+
         </div>
       <%end%>
     <%end%>
