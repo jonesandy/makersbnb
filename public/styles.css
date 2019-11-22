@@ -41,6 +41,10 @@ h1 {
   font-size: 4rem;
 }
 
+img {
+  width: 100%;
+}
+
 .heroText {
   text-align: center;
 }
