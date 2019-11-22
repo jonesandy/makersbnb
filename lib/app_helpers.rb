@@ -22,3 +22,23 @@ def booking_requests_array(user_id:)
   end
   listing_and_booking_array
 end
+
+def date_separator(string)
+  string[0] = ''
+  count = string.length
+  string[count - 1] = ''
+  string = string.split(',,')
+  string = string.map do |start_end|
+    array = []
+    dates = start_end.split(',')
+      starting_date = Date.parse(dates[0])
+      ending_date = Date.parse(dates[1]) + 1
+      until starting_date.strftime == ending_date.strftime do
+      array << starting_date.strftime
+      starting_date += 1
+      array
+      end
+    array
+  end
+  string.join(",").split(",")
+end

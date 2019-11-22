@@ -41,12 +41,14 @@ class MakersBnb < Sinatra::Base
 
   get '/bookings/new/:id' do
     @listing = Listing.get(params[:id])
+    @dates_array = date_separator(@listing.booked_dates) if @listing.booked_dates != nil
     erb :booking_new
   end
 
   post '/bookings/new/:id' do
     @user = Account.first(id: session[:user])
     @listing = Listing.get(params[:id])
+    
     @user.booking.create(
       listing_id: @listing.id,
       start_date: params[:start_date],
@@ -57,6 +59,9 @@ class MakersBnb < Sinatra::Base
 
   post '/booking/appoved' do
     Booking.confirm_booking(booking_id: params[:booking_id])
+    @booking = Booking.first(id: params[:booking_id])
+    @listing = Listing.first(id: @booking.listing_id)
+    @listing.update(booked_dates: "#{@booking.start_date.to_s},#{@booking.end_date.to_s},")
     redirect '/profile'
 
   end
