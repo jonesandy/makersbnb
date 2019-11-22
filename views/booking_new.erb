@@ -1,8 +1,9 @@
 <h3>Guest can use this page to book a space</h3>
 
 <form action='/bookings/new/<%=@listing.id%>' class="bookingform" method='post'>
-  I would like to book from: <input type="text" id="start_date_booking" name="start_date" min="<%= DateTime.now.strftime('%Y-%m-%d') %>">  
-  To: <input type="date" id="end_date_booking" name="end_date" max="<%=@listing.end_date%>" >
+  I would like to book from: <input placeholder="select start date" type="text" id="start_date_booking" name="start_date" min="<%= DateTime.now.strftime('%Y-%m-%d') %>">  
+  To: <input placeholder="select end date" type="text" id="end_date_booking" name="end_date" max="<%=@listing.end_date%>" >
   <br>
   <input type='submit' value='Submit'>
 </form>
+

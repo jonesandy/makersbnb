@@ -1,26 +1,18 @@
-var blocked_period = [ { start: "02/21/2012", end: "02/22/2012" }, { start: "03/21/2012", end: "03/22/2012" } ];
-
-console.log(blocked_period);
-
-
-
-
-
-
-
-
-$(document).ready(function() {
+// need to insert all dates in the array below
+var blocked_dates = ["20/11/2019", "27/11/2019"];
+ 
+function DisableDates(date) {
+    var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
+    return [blocked_dates.indexOf(string) == -1];
+}
+ 
 $(function() {
-$( "#start_date_booking" ).datepicker();
-});
-});
+     $("#start_date_booking").datepicker({
+         beforeShowDay: DisableDates
+     });
 
-// $(document).ready(function() {
-// $('#start_date').datepicker({
-//     beforeShowDay: function(date){
-//         if(date == 12/01/2020){
-//             return [false];
-//         }
-//         return [true];
-//     }
-// });
+     $("#end_date_booking").datepicker({
+        beforeShowDay: DisableDates
+    });
+
+});
