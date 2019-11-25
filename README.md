@@ -2,6 +2,15 @@
 
 The purpose of this app is to allow Hosts to list spaces to rent. Users are then able to browse posted listings and make bookings. The functionality is similar to AirBnB.
 
+This project was created as a group project while attending Makers Academy.
+
+## Screenshots
+
+![home page](docs/home.png)
+![profile](docs/profile.png)
+![listings page](docs/listings.png)
+
+
 ## User Stories
 
 The following User Stories were generated from the specification of the project.
