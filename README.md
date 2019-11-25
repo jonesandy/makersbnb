@@ -22,10 +22,11 @@ PostgreSQL will need to be installed for database creation. If not already insta
 ```bash
 $ psql
 
-# Create the following databases
+# Create the following database for production
 $ CREATE DATABASE makers_bnb_dev
 
-CREATE DATABASE makers_bnb_test
+# Create the following database for tests
+$ CREATE DATABASE makers_bnb_test
 
 # to start web server type
 $ rackup
