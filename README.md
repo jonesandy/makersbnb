@@ -10,6 +10,28 @@ This project was created as a group project while attending Makers Academy.
 ![profile](docs/profile.png)
 ![listings page](docs/listings.png)
 
+## Tech stack
+
+PostgreSQL used for database services.
+Backend coded in Ruby using SinatraDSL.
+
+## Setup
+
+PostgreSQL will need to be installed for database creation. If not already installed please see [here](https://www.postgresql.org/). Once installed open terminal.
+
+```bash
+$ psql
+
+# Create the following databases
+$ CREATE DATABASE makers_bnb_dev
+
+CREATE DATABASE makers_bnb_test
+
+# to start web server type
+$ rackup
+```
+
+Visit ```localhost:9292``` in your browser to view site.
 
 ## User Stories
 
@@ -78,17 +100,3 @@ The first three user stories have been identified as essential to delivering the
  - the user (guest) can see a list of postings;
  - the user (host) can input details about the listing and save the details added.
 
-## Setup
-
-*create database*
-- Please start by forking this repo.
-- In a terminal run `psql`
-- Create the following databases with:
-```
-CREATE DATABASE makers_bnb_dev;
-CREATE DATABASE makers_bnb_test;
-```
-<!-- - `rackup`
-- Using a web browser visit the relevant localhost -->
-
-Simplecov has been added to ensure test coverage.
